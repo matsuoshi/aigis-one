@@ -1,0 +1,17 @@
+source:
+  - ./src/styles
+  - ./src/demo
+dest: ./example
+index: src/styles/styleguide-index.md
+title: styleguide sample
+
+dependencies:
+  - ./theme/aigis_assets
+template_dir: ./theme/template
+template_engine: jade
+
+additional_styles:
+  - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+additional_scripts:
+  - https://code.jquery.com/jquery-3.2.1.min.js
+  - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
