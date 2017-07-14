@@ -95,11 +95,11 @@ $aigis-margin-narrow: $aigis-margin-main / 2;
 
   .aigis-module-name {
     font-weight: bold;
-    font-size: 180%;
+    font-size: 25px;
   }
 
   .aigis-module-filename {
-    font-size: 90%;
+    font-size: 12px;
     text-align: right;
   }
 
@@ -121,12 +121,13 @@ $aigis-margin-narrow: $aigis-margin-main / 2;
    */
   .aigis-module > pre {
     box-sizing: border-box;
-    border: 1px solid $aigis-color-border;
-    border-radius: 0 0 4px 4px;
-    border-top: none;
     width: 100%;
     padding: $aigis-margin-main / 3;
-    font-size: 85%;
+    margin: 0;
+    font-size: 12px;
+    border: 1px solid $aigis-color-border;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
     overflow-x: auto;
     overflow-y: hidden;
   }
