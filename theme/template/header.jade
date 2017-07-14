@@ -1,0 +1,12 @@
+header.aigis-header
+
+  a(href=root + 'index.html').aigis-header-logo
+    != config.title
+
+  nav.aigis-header-nav
+    ul.aigis-tags
+      each tag in config.collection.tag
+        li
+          a.aigis-tags-item(href=root + 'tag/' + tag + '/index.html') #{tag}
+      li
+        a(href=root + 'color.html').aigis-tags-item colors

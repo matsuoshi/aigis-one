@@ -1,0 +1,284 @@
+/*
+ * aigis-one
+ * (1 column theme for aigis : style guide generator)
+ */
+
+
+/*
+ * define
+ */
+$aigis-color: #333;
+$aigis-color-a: #36a;
+$aigis-color-a-hover: #888;
+$aigis-color-border: #ddd;
+$aigis-margin-main: 60px;
+$aigis-margin-narrow: $aigis-margin-main / 2;
+
+
+/*
+ * reset / basic
+ */
+.aigis-body {
+  padding: 30px;
+}
+
+.aigis-header,
+.aigis-footer,
+.aigis-contents {
+  font-size: 14px;
+  color: $aigis-color;
+
+  a {
+    text-decoration: none;
+    color: $aigis-color-a;
+    &:hover {
+      color: $aigis-color-a-hover;
+    }
+  }
+}
+
+
+/*
+ * ヘッダ
+ */
+.aigis-header {
+  overflow: hidden;
+  padding-bottom: $aigis-margin-narrow;
+  margin-bottom: $aigis-margin-main;
+  border-bottom: 1px solid $aigis-color-border;
+  text-align: right;
+
+  .aigis-header-logo {
+    float: left;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .aigis-header-nav {
+    display: inline;
+
+    .aigis-tags {
+      margin: 0;
+      padding: 0;
+      display: inline;
+      
+      & > li {
+        display: inline;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+
+/*
+ * フッタ
+ */
+.aigis-footer {
+  text-align: center;
+  margin-top: $aigis-margin-main;
+  padding-top: $aigis-margin-main;
+  border-top: 1px solid $aigis-color-border;
+}
+
+
+/*
+ * モジュール
+ */
+.aigis-main {
+
+  min-height: calc(100vh - 350px);
+
+  .aigis-module {
+    margin-bottom: $aigis-margin-main;
+  }
+
+  .aigis-module-name {
+    font-weight: bold;
+    font-size: 180%;
+  }
+
+  .aigis-module-filename {
+    font-size: 90%;
+    text-align: right;
+  }
+
+  /*
+   * プレビュー
+   */
+  .aigis-preview {
+    width: 100%;
+    box-sizing: border-box;
+    padding: $aigis-margin-narrow;
+    margin-top: $aigis-margin-narrow;
+    border: 1px solid $aigis-color-border;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+  }
+
+  /*
+   * コード
+   */
+  .aigis-module > pre {
+    box-sizing: border-box;
+    border: 1px solid $aigis-color-border;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    width: 100%;
+    padding: $aigis-margin-main / 3;
+    font-size: 85%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  /*
+   * カラーパレット
+   */
+  .aigis-colorPalette {
+    display: inline-block;
+    width: 200px;
+    margin: 0 1em 1em 0;
+
+    .aigis-colorPalette__color {
+      width: 100%;
+      height: $aigis-margin-main;
+      margin-bottom: .5em;
+    }
+  }
+}
+
+
+/*
+ * コンテンツ
+ */
+.aigis-contents .aigis-main {
+  line-height: 1.8;
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+  
+  /* img */
+  img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+  
+  /* heading */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 1.4em 0 1em;
+  }
+  h1 { font-size: 200%; }
+  h2 { font-size: 150%; }
+  h3 { font-size: 120%; }
+  h4 { font-size: 110%; }
+  h5 { font-size: 100%; }
+  h6 { font-size:  90%; }
+  
+  /* list */
+  ul, ol {
+    padding-left: 40px;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ul ul {
+    list-style-type: circle;
+  }
+  ul ul ul {
+    list-style-type: square;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  li {
+    list-style-type: inherit;
+    list-style-position: outside;
+  }
+  
+  /* table */
+  th, td {
+    border: 1px solid $aigis-color-border;
+    padding: 5px 10px;
+  }
+  
+  /* text */
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+    font-weight: inherit;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+---
+name: buttons
+tag:
+  - buttons
+---
+```html
+<a class="btn btn-default" href="#" role="button">Link</a>
+<button class="btn btn-default" type="submit">Button</button>
+<input class="btn btn-default" type="button" value="Input">
+<input class="btn btn-default" type="submit" value="Submit">
+```
+*/
+/*
+---
+name: options
+tag:
+  - buttons
+---
+```html
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+```
+*/
+/*
+---
+name: forms
+tag:
+  - forms
+---
+```html
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+```
+*/

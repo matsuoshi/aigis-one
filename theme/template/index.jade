@@ -1,0 +1,21 @@
+- var contents_class = (title == 'index') ? 'aigis-contents' : ''
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name='viewport', content='width=device-width')
+    link(href=root + 'aigis_assets/css/syntax-highlight.css', rel='stylesheet')
+    link(href=root + 'aigis_assets/css/aigis-one.css', rel='stylesheet')
+    if config.additional_styles
+      each css in config.additional_styles
+        link(href=css, rel='stylesheet')
+    if config.additional_scripts
+      each script in config.additional_scripts
+        script(src=script)
+
+  body.aigis-body(class=contents_class)
+    include ./header
+    include ./components
+    footer.aigis-footer
+      small Last update at #{timestamp}

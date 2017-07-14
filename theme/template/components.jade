@@ -1,0 +1,9 @@
+main.aigis-main
+  if components.length
+    each component in components
+      .aigis-module
+        h2.aigis-module-name(id=component.config.name) #{component.config.name}
+        .aigis-module-filename!= component.sourcePath
+        != component.html
+  else
+    != html
